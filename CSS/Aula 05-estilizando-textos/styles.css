@@ -1,0 +1,22 @@
+p{
+    font-family: "Rubik", monospace; /* pra estilizar a fonte, sempre essa propriedade
+    Pode colocar segunda opção de fonte, para caso não encontre a primeira, tenha uma segunda opção
+    Padrozinadas: serif, sans-serif, cursive, fantasy, monospace */
+    font-weight: 100; /* peso da fonte 
+    pode ser usado tipo bold, ultra bold(...) ou números.
+    + fina: 100
+    + grosso: 900 */ 
+    font-style: italic;
+    /* normal, italic, oblique */
+} 
+
+#exemplo{
+    text-transform: capitalize; 
+    /* Capitalize: torna a primeira letra maíuscula automaticamente
+    UPPERCASE: todas as letras maiúsculas
+    lowercase: todas as letras minúsculas */
+    text-align: center; 
+    /* center: alinha texto pro meio
+    end: alinha texto pro final
+    isso só acontece por conta do display block, padrão nos Ps */
+}

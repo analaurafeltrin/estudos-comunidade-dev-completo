@@ -1,0 +1,29 @@
+img{
+    border-radius: 50%;
+    border: 2px solid blue;
+    height: 200px;
+    width: 200px;
+}
+    /* arredondar imagem border-radius: 
+    inspecionar imagem no site e ver tamanho dela. 
+    pro círculo ser perfeito, cada borda precisa ter metade do tamanho
+    da img (Se for px) ou coloca 50% */
+
+    /* definir o tamanho da borda, p/ depois colocar lisa (solid) e cor */
+
+/* se eu quiser pegar uma imagem que não é quadrada
+e transformar ela em quadrado: NO HTML PRIMEIRO  */
+
+#bia{
+    background-image: url(assets/photos/DSC03730.JPG);
+    height: 200px;
+    width: 200px;
+    /* pronto, assim ela fica quadrada. */
+    background-size: cover; 
+    /* contain: imagem fica contida no tamanho da div 
+    cover: imagem ocupa todo o espaço da div */
+    background-position: 0% 10%; 
+    /* centraliza de forma vertical. 
+    pode colocar valores tb. Primeiro horizontal e Segundo verrtical (ex: 0, 0) */
+    filter: grayscale(40%); /* deixar a imagem 50% preto e branco */
+}

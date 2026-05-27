@@ -1,0 +1,43 @@
+/* Order
+especifica uma ordem que quer ser alterada dentro dos elementos
+da div flex
+padrão: 0 
+igual nas linguagens que o item 0 é sempre o primeiro.
+se eu quero que um item venha antes de todos os outros, precisa ser
+menor que 0, ou seja, -1 pra baixo
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.container{
+  display: flex;
+  height: 200px;
+  border: 2px solid black;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* flex-wrap: wrap; */
+  /* align-content: center; */
+}
+
+.item{
+  background-color: tomato;
+  margin: 10px;
+  padding: 10px 0;
+}
+
+.i3{
+  /* align-self: flex-end; */
+  order: -1; 
+}
+
+.i2{
+  order: 1;
+}

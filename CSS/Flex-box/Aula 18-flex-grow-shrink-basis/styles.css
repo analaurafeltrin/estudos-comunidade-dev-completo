@@ -1,0 +1,72 @@
+/* 
+Flex-grow: crescimento dos elementos, como eles podem expandir
+dentro da div
+padrão: 0 
+tamanho 1: estou pedindo pro item ter o tamanho máximo possível
+que ela possa ocupar 
+
+Flex-shrink: oposto do flex-grow. é sobre se o elemento
+pode ou não diminuir o seu tamanho
+se eu quiser que o item tenha um tamanho específico, e não diminua
+conforme o tamanho da tela.
+padrão: 1
+pra ver efeito, usar junto com flex-basis
+
+Flex-basis: definir largura ou altura de um valor base
+padrão: 
+
+COMANDOS DE ATALHO 
+
+FLEX-DIRECTION + FLEX-WRAP: FLEX-FLOW -> 1º valor é qual direção
+vc quer; 2º valor qual valor pro flex-wrap vc quer
+
+FLEX: tamanho dos elementos filhos
+FLEX-GROW + FLEX-SHRINK + FLEX-BASIS
+
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.container{
+  display: flex;
+  height: 200px;
+  border: 2px solid black;
+  /* flex-direction: row;
+  flex-wrap: wrap; */
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* align-content: center; */
+}
+
+.item{
+  background-color: tomato;
+  margin: 10px;
+  padding: 10px 0;
+}
+
+.i3{
+  /* align-self: flex-end; */
+  /* order: -1;  */
+  /* flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 100px; */
+  flex: 1 0 100px
+}
+
+.i2{
+  /* order: 1; */
+  /* flex-shrink: 0;
+  flex-basis: 200px; */
+  flex: 1;
+}
+
+/* jogo: FLEXBOX FROGGY 
+PRATICA CONCEITOS DE FLEXBOX */

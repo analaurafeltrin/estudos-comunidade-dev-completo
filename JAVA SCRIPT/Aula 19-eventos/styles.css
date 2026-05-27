@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 25px;
+  margin: 20px;
+  width: 30vw;
+  border-radius: 10%;
+  background-color: rgb(142, 45, 233);
+}
+
+h1 {
+  margin: 10px;
+}

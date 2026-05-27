@@ -1,0 +1,64 @@
+#hexaDecimal{
+    color: #ff0000;
+}
+
+/* colorzilla: extensão p/ selecionar a cor já no código hexa decimal 
+se acrescentar dois números no fim do código, dá pra botar opacidade tb
+ex: #ff000060; vai ficar 60% opaco */ 
+
+#rgb{
+    color: rgb(18, 187, 77);
+}
+
+/* cada número seria a intensidade p/ usar 
+0 -> mínimo de cor
+255 -> máximo de cor*/
+
+#rgba{
+    color: rgba(255, 13, 0, 0.5)
+}
+
+/* opacidade das cores com rgba
+0 -> mais transparente
+1 -> nada transparente */
+
+section{
+    background-color: rgb(113, 204, 245);
+    font-size: 20px;
+}
+
+#porcentagem{
+   font-size: 50%;
+  /*  vai pegar todos os p, e diminuir 50% do tamanho
+    padrão do navegador, ou seja, vai de 16 pra 8px 
+    No caso, acrescentando o font-size na section que seria 
+    o novo elemento pai, ele vai pegar metade de 20px. */
+}
+
+#em{
+    /* EM= 1x o tamanho do font-size do elemento pai
+    nesse caso, o elemento pai é o SECTION que é o primeiro direto
+    se 1em = 20px, 2em=40px. */
+    font-size: 2em; 
+}
+
+#rem{
+    /* REM = 1x valor padrão do elemento paizão raiz, HTML
+    EM e porcentagem pega do elemento pai direto 
+    REM sempre vai olhar pro font-size
+    porcentagem sempre vai olhar pro elemento pai
+    EM sempre vai olhar pro elemento pai*/
+    font-size: 1rem;
+}
+
+#caixa{
+    background-color: #ff00ff;
+    width: 50%; /* o padrão é ocupar a linha inteira da página. 
+    Se colocar 50%, vai pegar metade da página 
+    Pode usar %, px, em, rem
+    EM DIVS, IMAGENS, ELEMENTOS DE TELA INTEIRA:
+    vh e vw é usado tbm. não utilizar para font size*/
+    height: 50vh; /*  view port height (TELA) - 100% da altura do
+    view port. Se quero 50% será metade da tela */
+    width: 50vw; /* mesma coisa, mas no width */
+}

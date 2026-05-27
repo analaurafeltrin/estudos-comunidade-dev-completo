@@ -1,0 +1,34 @@
+#caixa1, #caixa2{
+    width: 100px;
+    height: 100px;
+}
+
+#caixa1{
+    background-color: #eb399e;
+    padding: 10px;
+    border: 2px solid #000000;
+    margin: 0px 0px 10px 0px;  
+    box-sizing: border-box;
+}
+
+/* o padding coloca um espaçamento da borda da caixa pro centro, "em volta". interno
+ o margin cria um espaçamento da parte de fora da caixa, tipo uma margem mesmo. externo 
+ antes era 100x100, mas adicionando border, padding e margin, fica 124x124 
+ precisa trocar uma prop padrão, que é a box-sizing. por padrão é content-box
+ precisa alterar para border-box. assim regulariza p 100x100 dnv
+ */ 
+
+#caixa2{
+    background-color: #53dc41;
+    box-sizing: border-box;
+}
+
+/* pra alinhar as duas divs: 
+margin pode ser igualado diferente pra cada quadrado:
+0px 0px 0px 0px (cima, direita, baixo, esquerda)
+vale para padding tbm. 
+
+outra forma: margin-bottom: 10px; (assim ele já entende que é apenas um lado) 
+prático se for apenas um lado. 
+
+*/

@@ -1,0 +1,90 @@
+/* PSEUDOELEMENTOS
+Aplicar estilos a mais nos elementos, independente
+de seus estados
+
+POR PADRÃO SÃO ESTILOS INLINE. NÃO RESPEITAM ALTURA
+E LARGURA. PRECISA TROCAR O PADRÃO USANDO 
+DISPLAY INLINE-BLOCK
+
+
+Diferença das pseudoclasses: sintaxe
+(:) pseudoclasses e (::) pseudoelementos
+
+BEFORE E AFTER
+
+before: cria um elemento antes da tag
+
+after: cria um elemento antes da tag
+
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    padding: 2rem;
+}
+
+h2{
+    margin: 3rem 0 1.5rem 0;
+}
+
+.item1{
+    position: relative;
+}
+
+/* POSITION RELATIVE NO P E POSITION ABSOLUTE NO BF E AFTER
+É PRA PODER MOVER P/ TOP, BOTTOM E LEFT POR EXEMPLO. 
+NESSE CASO NEM PRECISARIA MAIS DO DISPLAY INLINE-BLOCK */
+
+.item1::before{
+    content: "";
+    height: 4px;
+    width: 150px;
+    background-color: red;
+    /* display: inline-block; */
+    position: absolute;
+    top: -10px;
+    left: -20px;
+}
+
+.item1::after{
+    content: "";
+    height: 4px;
+    width: 150px;
+    background-color: blueviolet;
+    /* display: inline-block; */
+    position: absolute;
+    bottom: -10px;
+    left: 30px;
+}
+
+/* FIRST LINE 
+    tudo na primeira linha vai ficar personalizado em
+    textos grandes
+*/
+
+.item2::first-line{
+    font-weight: bold;
+}
+
+/* FIRST LETTER 
+    Estilo aplicado na primeira letra do texto
+*/
+
+.item3::first-letter{
+    font-size: 2rem;
+}
+
+/* SELECTION
+    Ao selecionar um texto, o fundo muda da cor padrão
+*/
+
+.item4::selection{
+    background-color: brown;
+    color: #ffffff;
+}

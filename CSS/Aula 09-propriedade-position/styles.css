@@ -1,0 +1,54 @@
+#itens{
+    background-color: #d0e7d0;
+    height: 200px;
+    position: relative;
+}
+
+/* alinhar o texto no centro da div.
+um dos jeitos: 
+line-height:200px - no mesmo tamanho do height -> não serve pra div sem texto
+position 
+*/
+
+span{
+    background-color: #18be18;
+}
+
+#span2{
+    position: absolute; 
+/* relative é parecido com static, mas a diferença é que no static, não consegue
+mover os elementos através das prop top, bottom, left, right */
+    top: 50%;
+    left: 50%;
+/* top pega e distancia o texto do topo */
+/* se usar o absolute no position, o item fica "independente",
+como se saísse do lugar e não existisse mais naquele lugar conjunto com
+os outros 
+ao usar absolute, recomendado: colocar item de referencia, para ser o item 
+relativo e mover o span. se não, ele pode deslocar pra qualquer lugar do 
+html, não só na div. isso é definido ali em #itens com o position relative */
+    transform: translate(-50%, -50%);
+/* isso daqui é para centralizar perefitamente o item, pois, sem essa prop,
+ele vai centralizar utilizando como base a borda superior esquerda da div,
+não a tela toda. valores: primeiro horizontal, dps vertical
+é - porque ele vai no sentido contrário, que é o centro da div
+
+NÃO É A FORMA MAIS RECOMENDADA. A MAIS RECOMENDADA É O FLEX, QUE VIRÁ EM OUTRA AULA */
+}
+
+/* Se eu quisesse fazer isso com os 3 itens: 
+criar outra div no html, assim:
+<div id="itens">
+    <div id="absoluta">
+            <span id="span1">Item 1</span>
+            <span id="span2">Item 2</span>
+            <span id="span3">Item 3</span>
+    </div>
+</div> 
+no css: 
+#absoluta{
+ position: aboslute;
+ top: 50%;
+ left: 50%;
+ trasnform: translate(-50%, -50%);
+*/

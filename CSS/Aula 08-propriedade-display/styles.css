@@ -1,0 +1,42 @@
+#block{
+    background-color: #e934344c;
+}
+
+#inline{
+    background-color: #5be9344c;
+}
+
+#inlineBlock{
+    background-color: #3434e94c;
+}
+
+p{
+    background-color: red;
+}
+
+span{
+    background-color: green;
+}
+
+#itemInlineBlock{
+    background-color: #6b2cd8;
+    display: inline-block;
+}
+
+/* O que é a propriedade display? 
+
+-> block: elemento vai estar, por padrão, ocupando todo o espaço 
+disponível na tela, horizontalmente.
+Obedece comando de width e height
+ex: headings, ps, divs
+
+-> inline: elemento vai estar, por padrão, ocupando o espaço
+necessário na tela, horiozontalmente. Só vai ocupar onde tiver
+textos, por exemplo.
+Não obedece comando de width e height
+ex: span, a, strong, underline
+
+-> inline block: junção dos dois 
+Conteúdo do width e height basta a ser reconhecido.
+Elemento ocupa apenas onde é necessário na tela.
+*/

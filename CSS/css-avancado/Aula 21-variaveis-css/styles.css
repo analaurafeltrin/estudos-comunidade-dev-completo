@@ -1,0 +1,113 @@
+/* VARIÁVEIS CSS
+Servem para repetir propriedades várias vezes no site
+assim, não precisa alterar manualmente os elementos
+
+precisa alterar em um seletor mais raiz, como no *
+ou no :root (aplica estilos na raiz do site)
+
+*/
+
+:root{
+    --primary-color: rgb(245, 127, 31);
+    --secundary-color: rgb(86, 50, 22);
+}
+
+/* olhar outros lugares onde usei essa cor: 
+button */
+
+
+/* selecionar vários elementos de uma vez:
+selecionar com o mouse o código e apertar CTRL D */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    padding: 2rem;
+}
+
+h2{
+    margin-top: 3rem;
+}
+
+.buttons{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    
+    button{
+        background-color: var(--primary-color);
+        padding: 1rem;
+        border-radius: 10px;
+        border: none;
+        color: #ffffff;
+        transition: 2s; 
+    }
+    
+    button:hover{
+        background-color: var(--secundary-color);
+    }
+    
+    button:focus{
+        outline: 2px solid rgb(255, 0, 0);
+    }
+}
+
+input{
+    padding: 1rem;
+    margin-top: 2rem;   
+}
+
+input:focus{
+    outline: 2px solid rgb(255, 0, 0);
+}
+
+
+.texts{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    
+    p:first-child{
+        font-weight: bold;
+        color: green
+    }
+    
+    p:last-child{
+        font-style: italic;
+        color: blue;
+    }
+    
+}
+
+
+.images{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    
+    img{
+        height: 100px;
+    }
+
+    img:nth-child(3){
+        border-radius: 90%;
+    }
+
+    img:nth-child(2){
+        background-color: blueviolet;
+    }
+
+    img:nth-child(odd){
+        background-color: aquamarine;
+    }
+
+}
+

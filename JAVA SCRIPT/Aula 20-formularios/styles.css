@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  padding: 1rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+form > div,
+form > fieldset {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+input:invalid {
+  border-color: rgb(255, 0, 0);
+}
+
+input:valid {
+  border-color: rgb(9, 132, 5);
+}

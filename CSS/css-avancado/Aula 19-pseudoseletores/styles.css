@@ -1,0 +1,127 @@
+/* PSEUDOCLASSES CSS
+
+pode fazer com várias coisas, além do p, img.
+
+HOVER E FOCUS
+Altera a aparência dos elementos
+
+hover: quando estamos passando o mouse no elemento
+
+focus: quando estamos selecionando o elemento
+
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    padding: 2rem;
+}
+
+h2{
+    margin-top: 3rem;
+}
+
+.buttons{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    
+    button{
+        background-color: rgb(245, 127, 31);
+        padding: 1rem;
+        border-radius: 10px;
+        border: none;
+        color: #ffffff;
+        transition: 2s; /* animação: efeito mais suave */
+    }
+    
+    button:hover{
+        background-color:  rgb(86, 50, 22);
+    }
+    
+    button:focus{
+        outline: 2px solid rgb(255, 0, 0);
+    }
+}
+
+input{
+    padding: 1rem;
+    margin-top: 2rem;   
+}
+
+input:focus{
+    outline: 2px solid rgb(255, 0, 0);
+}
+
+/* FIRST CHILD E LAST CHILD
+Altera a posição dos elementos
+
+first child: 1º elemento muda
+
+last child: último elemento muda 
+
+*/
+
+
+.texts{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    
+    p:first-child{
+        font-weight: bold;
+        color: green
+    }
+    
+    p:last-child{
+        font-style: italic;
+        color: blue;
+    }
+    
+}
+
+/* nth-child(n)
+Altera a posição dos elementos
+Altera os outros elementos que não são o 1º e o último!
+
+Tbm se tiver 5 imagens e eu quero só os números
+ímpares 
+daí seria: nth-child(odd) - ímpar
+nth-child(even) - par
+
+operações matemáticas tbm (por ex, múltiplos de 5)
+
+*/
+
+.images{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    
+    img{
+        height: 100px;
+    }
+
+    img:nth-child(3){
+        border-radius: 90%;
+    }
+
+    img:nth-child(2){
+        background-color: blueviolet;
+    }
+
+    img:nth-child(odd){
+        background-color: aquamarine;
+    }
+
+}
+
+/* tem muitas outras pseudoclasses */

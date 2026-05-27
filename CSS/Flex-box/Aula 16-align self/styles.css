@@ -1,0 +1,36 @@
+/* Align self
+tem haver com o align items
+ele se auto-alinha, não seguindo mais as prop definidas
+pelo container pai
+padrão: o que está vindo de acordo com o align items
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.container{
+  display: flex;
+  height: 200px;
+  border: 2px solid black;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* flex-wrap: wrap; */
+  /* align-content: center; */
+}
+
+.item{
+  background-color: tomato;
+  margin: 10px;
+  padding: 10px 0;
+}
+
+.i3{
+  align-self: flex-end;
+}

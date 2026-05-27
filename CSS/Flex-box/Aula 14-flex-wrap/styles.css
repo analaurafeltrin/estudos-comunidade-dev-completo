@@ -1,0 +1,33 @@
+/* Flex wrap
+útil p/ quando tem muitos itens dentro da div e não cabe tudo
+na mesma linha. Queremos que todos os itens fiquem dentro da div
+e não extrapolem da caixa.
+PADRÃO: no-wrap
+flex-wrap: wrap - fica alinhado na div
+flex-wrap: reverse: inverte a ordem dos itens na quebra de linha
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.container{
+  display: flex;
+  height: 200px;
+  border: 2px solid black;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.item{
+  background-color: tomato;
+  margin: 10px;
+  padding: 10px 0;
+}

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 20</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Formulários</h1>
+    <h2>Pesquisa de satisfação dos sabores de sorvete da Ana:</h2>
+    <form>
+      <div>
+        <label for="name">Seu nome:</label>
+        <input
+          id="name"
+          name="name"
+          type="text "
+          autocomplete="name"
+          required
+        />
+        <!-- label: acessibilidade, inputs html.
+        na label, precisa informar o nome do id do input
+        para que os leitores de tela saibam 
+        required: torna o campo obrigatório -->
+      </div>
+      <div>
+        <label for="email">Seu email:</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          required
+        />
+      </div>
+      <div>
+        <label for="gender">Seu gênero</label>
+        <select id="gender" name="gender">
+          <option value="feminino">Feminino</option>
+          <option value="masculino">Masculino</option>
+          <option value="não-binário">Não binário</option>
+          <option value="outro">Outro</option>
+        </select>
+        <!-- precisa ter valor por ser um tipo selection, não
+        sendo input. é importante na hora de submeter o form -->
+      </div>
+
+      <fieldset>
+        <legend>O que você achou do nosso produto?</legend>
+
+        <div>
+          <input type="radio" id="good" name="option" value="good" required />
+          <label for="good">Bom</label>
+        </div>
+
+        <div>
+          <input type="radio" id="bad" name="option" value="bad" required />
+          <label for="bad">Ruim</label>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            id="indifferent"
+            name="option"
+            value="indifferent"
+            required
+          />
+          <label for="indifferent">Indiferente</label>
+        </div>
+      </fieldset>
+      <!-- fieldset: pra selecionar uma opção dentre várias 
+      type radio: visualiza todas as opções na tela, diferente 
+      do option que vc tem que selecionar
+      todos estão com o mesmo name (opinion) porque só pode
+      selecionar 1 opção. se pudesse selecionar mais +1 opção, aí
+      mudaria os names -->
+      <fieldset id="sorvetes">
+        <legend>Quais sabores você compraria denovo?</legend>
+        <div>
+          <input
+            type="checkbox"
+            id="blue-ice"
+            name="sorvetes"
+            value="blue-ice"
+          />
+          <label for="blue-ice">Blue-Ice</label>
+        </div>
+        <div>
+          <!-- no input não precisa passar um value -->
+          <input type="checkbox" id="milho" name="sorvetes" value="milho" />
+          <label for="milho">Milho</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="capuccino"
+            name="sorvetes"
+            value="capuccino"
+          />
+          <label for="capuccino">Capuccino</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="doce de leite"
+            name="sorvetes"
+            value="doce de leite"
+          />
+          <label for="doce de leite">Doce de leite</label>
+        </div>
+      </fieldset>
+      <!-- aqui no checkbox o comportamento dele é selecionar +1,
+      mesmo com o mesmo name em todos. o comportamento do radio é
+      selecionar apenas 1.  -->
+      <div>
+        <label for="message">Tem algo mais para nos dizer?</label>
+        <textarea id="message"></textarea>
+        <!-- também poderia ser usado o input, mas ele é usado mais 
+      para coisas mais enxutas. -->
+      </div>
+      <button>Submeter formulário</button>
+      <!-- importante o botão estar dentro do forms -->
+    </form>
+    <script src="forms.js"></script>
+  </body>
+</html>

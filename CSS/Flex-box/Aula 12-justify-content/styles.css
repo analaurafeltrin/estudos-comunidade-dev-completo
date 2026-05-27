@@ -1,0 +1,37 @@
+/* Justify content
+Alinhamento p/ esq, centro, direita.
+flex-start: valor padrão 
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+/* quero distribuir os itens ao longo da div. como? NO FLEX ROW:
+space-around: distribui os elementos ao longo da tela. se adapta ao tamanho do vp.
+espaçamento não tem o mesmo tamanho. 
+space-evenly: distribui os elementos, mas o espaçamento entre os itens é igual 
+space-between: mesmo tamanho de espaçamento entre os itens, mas não tem espaçamento
+dos lados esq e direita. */
+
+
+.container{
+  display: flex;
+  height: 500px;
+  border: 2px solid black;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* se for em COLUMN? Div vai ocupar toda a parte horizontal da tela, mas não na vertical
+então é preciso apresentar um height na div */
+
+.item{
+  background-color: tomato;
+  /* margin: 10px; */
+}

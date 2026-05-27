@@ -1,0 +1,32 @@
+/* Align content
+No flex-box, só é valido quando tem quebra de linha e vários itens
+Parecida com align items
+Padrão: stretch
+Align items e content sempre olha para o EIXO TRANSVERSAL
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.container{
+  display: flex;
+  height: 200px;
+  border: 2px solid black;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.item{
+  background-color: tomato;
+  margin: 10px;
+  padding: 10px 0;
+}

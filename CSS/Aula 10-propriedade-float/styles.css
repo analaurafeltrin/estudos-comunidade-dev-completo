@@ -1,0 +1,51 @@
+/* FLOAT
+Posiciona elementos na tela p/ esquerda ou direita
+Originalmente, surgiu pra dar efeito de textos contornando uma foto
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* isso serve para que todos os elementos html da página sejam
+aplicados com margin e padding */
+
+.fotoFamily{
+    height: 300px;
+    float: left;
+    margin: 0px 20px 20px 0;
+}
+
+/* O . é pq é classe, # é id. a altura é pra foto não ficar imensa */
+
+.noticias{
+    border: 2px solid rgb(186, 50, 50);
+    overflow: auto;
+    /* overflow é pra especificar como os itens se comportam dentro da div
+    auto é para considerar altura e largura no caso da img, 
+    e ajustar certo o texto (cria um scroll) */
+}
+
+.cafe{
+    height: 24px;
+    padding-top: 10px;
+}
+
+nav{
+    background-color: rgb(204, 196, 196);
+    padding: 0 40px;
+    height: 50px;
+}
+
+ul{
+    float: right;
+/* quando quero que a img flutue pra direita */
+
+    li{
+        display: inline-block;
+        line-height: 50px;
+        margin-right: 20px;
+    }
+}

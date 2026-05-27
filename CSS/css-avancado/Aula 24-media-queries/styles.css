@@ -1,0 +1,98 @@
+/* 
+MEDIA QUERIES 
+
+Aplica certos estilos, baseados em algumas
+condições, principalmente com responsividade */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-family: "Anton SC", sans-serif;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+.textsContainer {
+  padding: 1rem;
+}
+
+.imagesContainer {
+  display: flex;
+}
+
+.image1 {
+  background-image: url(assets/photos/DSC03730.JPG);
+  height: 400px;
+  width: 50vw;
+  background-size: cover;
+}
+
+.image2 {
+  background-image: url(assets/photos/secondPicture.jpg);
+  height: 400px;
+  width: 50vw;
+  background-size: cover;
+}
+
+/* aplicando a media querie */
+@media (max-width: 600px) {
+  h1 {
+    font-family: 4rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  .imagesContainer {
+    flex-direction: column;
+  }
+
+  .image1,
+  .image2 {
+    width: 100vw;
+    height: 300px;
+  }
+}
+/* o negócio é botar o MAX width. ou max-height
+MEDIA PARA TELAS DE CELULAR! 
+
+poderia usar o MIN-width ou min-height tb 
+*/
+
+@media (min-width: 600px) and (max-width: 800px) {
+  body {
+    background-color: #23bdb2;
+  }
+}
+
+/* break points
+diferentes estilos pra vários tamanhos de telas
+
+TELAS GRANDES -> 1400 BREAK POINT (ex.)
+
+TABLETS -> 700px a 800px
+
+CELULARES -> 700px ou menos
+
+isso são break points. O tamanho definido p/ telas
+
+olhar orientação da tela: portrait (altura > largura)
+ou landscape (largura > altura)
+
+
+*/
+
+@media (orientation: portrait) {
+  body {
+    background-color: blueviolet;
+  }
+}

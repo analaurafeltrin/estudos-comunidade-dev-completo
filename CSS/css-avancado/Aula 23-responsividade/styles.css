@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    padding: 2rem;
+}
+
+h2{
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+/* RESPONSIVIDADE 
+
+Capacidade do site de se adaptar pra diversos 
+tamanhos de tela. 
+
+1º -> Sempre priorizar rem ao invés de px.
+
+2º -> Flexbox responsivo (shrink, grow, wrap..)
+
+3º -> Imagens responsivas 
+*/
+
+.container{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;  /* -> quebra os itens para que 
+    eles não quebrem na tela */ 
+
+    div{
+        background-color: blueviolet;
+        padding: 2rem;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+}
+
+.ana{
+    max-width: 100%; /* pra imagem não vazar */
+}

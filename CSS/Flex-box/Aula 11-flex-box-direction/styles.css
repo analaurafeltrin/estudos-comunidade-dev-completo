@@ -1,0 +1,45 @@
+/* FLEX BOX
+Módulo com várias prop pra estilizar divs e divs dentro das divs
+de maneira muito mais fácil e eficiente 
+
+Eixo da div
+eixo principal: item 1, item 2, item 3 -> seria esquerda pra direita. 
+cima p/ baixo seria eixo transversal, secundário
+
+eixo principal: item 1
+                item 2
+                item 3
+                cima p/ baixo
+  esquerda pra direita seria eixo transversal
+
+  Além do display flex, outras prop. são utilizadas pra estilizar as divs
+ex: flex direction, flex wrap, flex flow, align-items, align-self,
+justify content, align content, order, flex grow, flex shrink, flex basis..
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.container{
+  display: flex;
+  border: 2px solid black;
+  flex-direction: column;
+}
+/* ao aplicar o display flex na div pai, as divs filhos tbm ocupam só o espaço necessário
+parecido com o display inline 
+flex-direction: qual o eixo principal dos elementos? 
+  row - esq p/ direita (PADRÃO)
+  column - cima p/ baixo
+  reverse - inverte a ordem dos itens 
+*/
+
+.item{
+  background-color: tomato;
+  margin: 10px;
+}

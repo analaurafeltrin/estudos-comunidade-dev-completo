@@ -1,0 +1,289 @@
+<!-- biblioteca pra criação de interfaces WEB utilizada para
+criar elementos html e j.s no mesmo arquivo (.jsx) -->
+<!-- angular e vue são frameworks -->
+
+<!-- blunders: o que são? 
+'empacotamentos'
+importantes pq podemos precisar lidar com instalação de 
+bibliotecas externas. só que, ao instalar, acaba importanto 
+muitos arquivos. isso é ruim pq, ao rodar, vai dar mt mais
+trabalho e o navegador ia demorar muito pra carregar tudo isso
+
+o blunder pega todos esses arquivos e converte em um só,
+que será carregado de uma vez. é essencial utilizar
+em projetos complexos 
+
+o blunder mais conhecido se chama webPack
+babel: Converter ES6+ para JavaScript compatível com navegadores
+antigos (webPack) -->
+
+<!-- vite & create-react-app
+Antes do vite tinha o Create-react-app -> tbm cria React do 0.
+Usa webPack por baixo dos panos
+
+Vite -> ferramenta que cria projetos react do 0.
+Muito mais rápido que o create-react-app.
+Usa rollup e esbuild 
+Rollup - buildar a app (bundle) -> pegar o código e subir pra
+algum lugar. Parecido com o webpack.
+Esbuild -> ao codar rodando no computador local, projeto em
+desenvolvimento. Ele gera apenas o bundle necessário que
+tenha haver com a biblioteca que esteja sendo usada no momento
+
+USAR O VITE. 
+-->
+
+<!-- DIFERENÇAS CRUCIAIS 
+HTML PURO: class
+REACT: className
+
+HTML PURO: onclick
+REACT: onClick
+
+praticamente tudo precisa ter 2ª palavra com letra maiúscula
+
+Virtual DOM: 
+
+Arquivo principal do site sempre será o index.html
+
+No React, os imports são formas de importar códigos de outros
+arquivos. 
+
+ARQUIVO MAIN.JSX
+
+ReactDOM -> ao criar um root em cima dele, apenas atualizamos
+o virtual DOM. Isso é o que fica atualizando
+Dentro dela, vamos renderizar os componentes do site
+index.html -> vê script.jsx -> vê ReactDOM -> vê app.jsx dentro
+
+A estrutura do React vai ser mexida no app.jsx. 
+
+
+Tudo no React é componentes. Identifica com < >
+Porém sempre letra inicial maiúscula. 
+
+tag vazia: <> </> precisa ter, se não tiver o código quebra.
+não dá pra colocar dois componentes HTML sem ter isso, mas 
+pode ser tanto vazia quanto algo (tipo <div>)
+
+export default App -> precisa fazer isso p/ exportar em outro 
+lugar. Daí ficaria no main.jsx: import App from './App'.
+SÓ PODE SER USADO QUANDO TEM APENAS 1 COMPONENTE NO ARQUIVO.
+
+export { App, App2 }; -> quando tem +1 componente no msm
+arquivo. Daí ficaria no main.jsx: import {App} from './App'
+
+No react precisa fechar todas as Tags (img etc)
+
+-rocketseat (extensão) -> digitar rfc enter já cria uma base 
+de componentes 
+
+PROPS: passa informações de um componente pai p/ um filho
+
+({X, Y})
+
+const Button = ({iconImage, backgroundColor}) => {
+  return (
+    <div className="defaultButton linkedinButton">
+      <img src={iconImage} alt="" aria-hidden="true" />
+      <a href="https://www.linkedin.com/in/analaurafeltrin/" target="_blank">
+        Confira meu linkedIn
+      </a>
+    </div>
+  );
+};
+
+CHILDREN: 
+Componente filho que recebe as props
+
+const Button = ({iconImage, backgroundColor, children}) => {
+  return (
+    <div className="defaultButton linkedinButton">
+      <img src={iconImage} alt="" aria-hidden="true" />
+      <a href="https://www.linkedin.com/in/analaurafeltrin/" target="_blank" 
+      > {children}
+        Confira meu linkedIn 
+      </a>
+    </div>
+  );
+};
+
+
+export default Button;
+
+-->
+
+<!-- renderização condicional 
+
+geralmente, utiliza um operador ternário 
+
+por exemplo, se tivessemos um back-end no site, e quisessemos que o download
+viesse do back-end e precisamos baixar. 
+
+
+const HomePage = () => {
+
+ const resumeDownloadComplete = true;
+    return(
+  <section id="homeSection">
+    <div
+      id="homePhoto"
+      role="img"
+      aria-label="Foto de Ana Laura sorrindo para a câmera"
+    ></div>
+    <div id="homeContent">
+      <div id="homeTexts">
+        <h1 className="titleH1">Ana Laura Feltrin</h1>
+        <h2>Desenvolvedora front-end</h2>
+
+        {
+        resumeDownloadComplete ? (
+          <Button buttonType="downloadResume"> Baixar currículo </Button>
+        ) : null 
+        }
+
+      </div>
+    </div>
+  </section>
+)};
+
+Dessa forma ele baixaria através do back-end e o botão só aparece se o 
+booleano for true. Se for falso, não aparece.
+
+Outra coisa que podemos fazer com a renderização condicional: 
+FAZER UMA TELA DE ERROS PARA CHAMAR QDO ALGO DER ERRADO.
+
+const HomePage = () => {
+
+ const resumeDownloadComplete = false;
+ const erro = true; 
+
+ if(erro) {
+ return (
+ <p> Erro </p> 
+ )}
+
+    return(
+  <section id="homeSection">
+    <div
+      id="homePhoto"
+      role="img"
+      aria-label="Foto de Ana Laura sorrindo para a câmera"></div>
+    <div id="homeContent">
+      <div id="homeTexts">
+        <h1 className="titleH1">Ana Laura Feltrin</h1>
+        <h2>Desenvolvedora front-end</h2>
+
+        {
+        resumeDownloadComplete ? (
+          <Button buttonType="downloadResume"> Baixar currículo </Button>
+        ) : null 
+        }
+
+      </div>
+    </div>
+  </section>
+)};
+
+-->
+
+<!-- STATE E REACT HOOKS
+
+Toda tela tem um estado inicial, atual, etc
+(ciclo de vida componentes do react)
+
+Colocamos condições lógicas dependendo do estado que o componente
+estiver. Podemos fazer isso através dos Hooks
+
+USE STATE 
+
+Pra alterar algo: set___.
+
+import { useState } from 'react'
+
+const App () => {
+  const [count, setCount] = useState(0)
+    cont [variável que salva o estado, método chamado p/ modificar estado]
+    = hook (valor inicial)
+  
+  <>
+  <div> 
+      <a href "..." target=.. img... alt... </a>
+  </div>
+  <h1> vite + react </h1>
+  <button onClick = {() => setCount((count) => count +1 )}>
+                            aqui acima é disponibilizada para caso
+                            queira usar o estado anterior da 
+                            variável (ex: 9 +1, +1, +1...)
+    count is {count}
+  </button> 
+  ) 
+  </>
+
+  UMA FUNÇÃO ANÔNIMA FOI CRIADA ALI NO BUTTON MSM, PODERIA SER
+  EM CIMA. 
+  
+
+  obs: usa muito em - valores dos inputs em estados em forms
+                    - contadores (igual ex. abaixo)
+                    - respostas de back-end points p/ informar ao cliente
+  }
+
+USE EFFECT
+  A cada vez que uma variável for modificada de valor, uma lógica
+  pode ser executada.
+
+  import { useEffect } from 'react';
+
+  useEffect (() => { 
+            1º parâmetro
+
+
+  },[]); 
+    2º parâmetro: coloca as callBacks que quer que fique ouvindo 
+    (parecido com o addEventListener do JS Vanilla - puro)
+
+-->
+
+<!-- EXEMPLO MAIS CLARO DE HOOKS:
+ Estado para salvar a informação de se o currículo for concluído 
+ corretamente através do back-end via end-point
+ 
+
+import { useState, useEffect } from 'react';
+
+const HomePage = () => {
+
+ const [resumeDownloadComplete, setResumeDownloadComplete] = useState (false);
+  
+ useEffect (() => {
+    setTimeout(() => {
+     -> supondo que dê certo a request que trás o currículo
+    setResumeDownloadComplete(true)
+    }, 5000) 
+ }, []);
+
+    return(
+  <section id="homeSection">
+    <div
+      id="homePhoto"
+      role="img"
+      aria-label="Foto de Ana Laura sorrindo para a câmera"></div>
+    <div id="homeContent">
+      <div id="homeTexts">
+        <h1 className="titleH1">Ana Laura Feltrin</h1>
+        <h2>Desenvolvedora front-end</h2>
+
+        {
+        resumeDownloadComplete ? (
+          <Button buttonType="downloadResume"> Baixar currículo </Button>
+        ) : null 
+        }
+
+      </div>
+    </div>
+  </section>
+)};
+  
+  
+  -->

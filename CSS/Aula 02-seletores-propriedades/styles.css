@@ -1,0 +1,21 @@
+/* seletores de elemento */
+
+h3{
+    color: pink; 
+}
+
+section{
+    background-color: darkgray;
+}
+
+/* seletores de classe */
+.textoAzul{
+    color: blue;
+}
+
+/* seletor de ID */
+#textoRosa{
+    color:blueviolet;
+} 
+
+

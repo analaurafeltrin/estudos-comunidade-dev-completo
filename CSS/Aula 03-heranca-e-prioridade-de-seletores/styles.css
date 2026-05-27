@@ -1,0 +1,58 @@
+/* priorizar um seletor css, caso tenham vários na 
+mesma seleção */
+
+.textoAzul{
+    color: blue;
+}
+
+.textoBold{
+    font-weight: bold;
+}
+
+#textoRosa{
+    color: pink;
+}
+
+/* aqui priorizou o rosa por ser o ID */
+
+p{
+    color: orange;
+}
+
+/* seletor de elemento é o menor prioritário. 
+prioriza o seletor de id, depois o class */
+
+/* herança:
+elemento pai: ex -> elemento head, body, nav
+elemento filho ex -> h1, p
+se aplicarmos um estilo pro nav, tudo dentro do nav vai aderir esse estilo
+*/
+
+nav{
+    font-size: 30px;
+}
+
+/* não são todas as propriedades css que são herdadas pelos elementos filhos
+
+heranças herdavéis por padrão: 
+-> color
+-> font-family
+-> font-size
+-> font-style
+-> font-weight
+-> line-height
+-> text-align
+-> visibility
+
+heranças não herdáveis por padrão:
+-> background
+-> border
+-> margin
+-> padding
+-> height
+-> width
+-> display
+
+tem uma forma de forçar elas a serem herdadas pelo elelemento pai
+
+*/

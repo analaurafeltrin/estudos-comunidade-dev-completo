@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Site de currículo pessoal de Ana Laura Feltrin, programadora front-end."
+    />
+    <meta name="author" content="Ana Laura Feltrin" />
+    <meta
+      name="keywords"
+      content="currículo, portfolio, tecnologia, programação, desenvolvedor, site pessoal, html, css, javascript"
+    />
+    <meta name="robots" content="index, follow" />
+    <title>Ana Laura - Currículo</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image" href="assets/icon/portfolioicon.png" />
+  </head>
+  <body>
+    <nav>
+      <img src="assets/icon/portfolio.png" alt="" aria-hidden="true" />
+      <ul id="navBarLinks">
+        <li>
+          <a href="#aboutMeSection"><b>Sobre mim</b></a>
+        </li>
+        <li>
+          <a href="#skillsSection"><b>Skills</b></a>
+        </li>
+        <li>
+          <a href="#projectsSection"><b>Projetos</b></a>
+        </li>
+        <li>
+          <a href="#contactSection"><b>Contato</b></a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="homeSection">
+        <div
+          id="homePhoto"
+          role="img"
+          aria-label="Foto de Ana Laura sorrindo para a câmera"
+        ></div>
+        <div id="homeContent">
+          <div id="homeTexts">
+            <h1 class="titleH1">Ana Laura Feltrin</h1>
+            <h2>Desenvolvedora front-end</h2>
+            <div class="defaultButton downloadButtonBlue">
+              <img src="assets/icon/download.png" alt="" aria-hidden="true" />
+              <a href="sources/curriculo.pdf" download="curriculo.pdf"
+                >Baixar currículo</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="aboutMeSection">
+        <div id="aboutMePhoto" aria-hidden="true"></div>
+        <div id="aboutMeTextsFlexContainer">
+          <div id="aboutMeTextsFlexItem">
+            <h1 class="titleH1">Sobre mim</h1>
+            <p>
+              Olá! Meu nome é Ana Laura. Tenho 25 anos, moro em Ribeirão Preto /
+              SP, e sou formada em psicologia. Apesar de atuar na área, venho
+              desenvolvendo minhas habilidades com a programação front-end, e
+              tenho o desejo de realizar uma transição de carreira.
+            </p>
+            <div class="defaultButton linkedinButton">
+              <img src="assets/icon/arrow.png" alt="" aria-hidden="true" />
+              <a
+                href="https://www.linkedin.com/in/analaurafeltrin/"
+                target="_blank"
+                >Confira meu linkedIn</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skillsSection">
+        <div class="overlay">
+          <h1 id="titleSkills">Skills</h1>
+          <ul>
+            <li>Inglês intermediário</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>ES6</li>
+            <!-- JS MODERNO  -->
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Vercel</li>
+          </ul>
+          <div class="defaultButton downloadButtonPurple">
+            <img src="assets/icon/download.png" alt="" aria-hidden="true" />
+            <a href="sources/curriculo.pdf" download="curriculo.pdf"
+              >Baixar currículo completo</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="projectsSection">
+        <h1>Projetos</h1>
+
+        <div id="projectDivs" aria-live="polite">
+          <div class="projectContainer">
+            <h2>Site de Links</h2>
+            <p>
+              Nesse projeto, eu tive a oportunidade de desenvolver um site de
+              links para minha irmã divulgar seus cupons personalizados em sites
+              afiliados. Utilizei as tecnologias HTML, CSS e apenas um pouquinho
+              de JavaScript
+            </p>
+            <div class="projectButton">
+              <img src="assets/icon/github.png" alt="" aria-hidden="true" />
+              <a
+                href="https://github.com/analaurafeltrin/siteMaria"
+                target="_blank"
+                >Ver no gitHub</a
+              >
+            </div>
+          </div>
+
+          <div class="projectContainer hiddenProject">
+            <h2>Lorem1</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Distinctio, necessitatibus enim sit dignissimos ipsa ex, omnis
+              adipisci, corporis architecto quam quaerat unde beatae nostrum.
+              Doloribus quam accusamus dolor delectus fugit!
+            </p>
+            <div class="projectButton">
+              <img src="assets/icon/github.png" alt="" aria-hidden="true" />
+              <a href="x" target="_blank">Ver no gitHub</a>
+            </div>
+          </div>
+
+          <div class="projectContainer hiddenProject">
+            <h2>Lorem2</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Distinctio, necessitatibus enim sit dignissimos ipsa ex, omnis
+              adipisci, corporis architecto quam quaerat unde beatae nostrum.
+              Doloribus quam accusamus dolor delectus fugit!
+            </p>
+            <div class="projectButton">
+              <img src="assets/icon/github.png" alt="" aria-hidden="true" />
+              <a href="x" target="_blank">Ver no gitHub</a>
+            </div>
+          </div>
+
+          <div class="projectContainer hiddenProject">
+            <h2>Lorem3</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Distinctio, necessitatibus enim sit dignissimos ipsa ex, omnis
+              adipisci, corporis architecto quam quaerat unde beatae nostrum.
+              Doloribus quam accusamus dolor delectus fugit!
+            </p>
+            <div class="projectButton">
+              <img src="assets/icon/github.png" alt="" aria-hidden="true" />
+              <a href="x" target="_blank">Ver no gitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <button id="buttonSeeOthers">Ver outros projetos</button>
+      </section>
+
+      <section id="contactSection">
+        <div
+          id="contactPhoto"
+          role="img"
+          aria-label="Foto de Ana Laura sorrindo para a câmera, sentada no chão, escrevendo uma palavra em um cartaz"
+        ></div>
+        <div id="contactTextsContainer">
+          <h1 class="title">Contato</h1>
+          <p>
+            Se tiver interesse em conhecer um pouco mais do meu trabalho, vou
+            deixar minhas formas de contato e redes sociais listadas abaixo.
+          </p>
+
+          <div id="contactTextsChild">
+            <address class="emailAndPhone">
+              <div class="contactItem">
+                <img src="assets/icon/e-mail.png" alt="" aria-hidden="true" />
+                <p>psianafeltrin@gmail.com</p>
+              </div>
+              <div class="contactItem">
+                <img src="assets/icon/whatsapp.png" alt="" aria-hidden="true" />
+                <p>+55 (16) 99263-0023</p>
+              </div>
+            </address>
+
+            <div class="socialMedia">
+              <a
+                href="https://www.linkedin.com/in/analaurafeltrin/"
+                target="_blank"
+                aria-label="Acesse meu perfil no LinkedIn"
+                ><img src="assets/icon/linkedin.png" alt=""
+              /></a>
+              <a
+                href="https://github.com/analaurafeltrin"
+                target="_blank"
+                aria-label="Acesse meu perfil no GitHub"
+                ><img src="assets/icon/github.png" alt=""
+              /></a>
+              <a
+                href="https://www.instagram.com/psi.analaurafeltrin"
+                target="_blank"
+                aria-label="Acesse meu perfil no Instagram"
+                ><img src="assets/icon/instagram.png" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      document
+        .getElementById("buttonSeeOthers")
+        .addEventListener("click", function () {
+          // <!-- Seleciona todos os projetos que estão escondidos -->
+          const hiddenProjects = document.querySelectorAll(".hiddenProject");
+
+          hiddenProjects.forEach((project) => {
+            project.classList.remove("hiddenProject");
+          });
+
+          // Opcional: Esconde o botão depois que tudo for mostrado -->
+          const button = document.getElementById("buttonSeeOthers");
+          button.style.setProperty("display", "none", "important");
+        });
+    </script>
+  </body>
+</html>
